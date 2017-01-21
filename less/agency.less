@@ -625,17 +625,43 @@ section#contact {
     .section-subheading {
       color: white;
     }
-    .form-group {
-        margin-bottom: 25px;
-        input,
+    .contact-form {
+        input, textarea {
+            width: 350px;
+            padding: 10px;
+            border: 0;
+        }
+        input {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: solid 1px @gray-lighter;
+            background-color: white;
+        }
+        input:focus {
+            outline: none;
+            background-color: @theme-lighter;
+        }
         textarea {
-            padding: 20px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            resize: none;
         }
-        input.form-control {
-            height: auto;
+        textarea:focus {
+            outline: none;
+            background-color: @theme-lighter;
         }
-        textarea.form-control {
-            height: 236px;
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 0;
+            background: @theme-primary;
+            border-bottom: solid 5px @theme-dark;
+            color: white;
+        }
+        .input-danger {
+            background-color: @theme-danger;
+            color: white;
         }
     }
     .form-control:focus {
@@ -643,27 +669,20 @@ section#contact {
         box-shadow: none;
     }
     ::-webkit-input-placeholder {
-       .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
+       color: @gray-medium-light;
     }
     :-moz-placeholder { /* Firefox 18- */
-       .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
+       color: @gray-medium-light;
     }
     ::-moz-placeholder {  /* Firefox 19+ */
-       .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
+       color: @gray-medium-light;
     }
     :-ms-input-placeholder {
-       .heading-font;
        font-weight: 700;
-       color: @gray-lighter;
-    }
-    .text-danger {
-        color: @theme-danger;
+       color: @gray-medium-light;
     }
     .connect-cta {
       position: relative;

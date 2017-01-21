@@ -292,13 +292,16 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-12">
+                <div class="col-md-12 contact-form">
                     <form action="">
-                        <label for="email">How can I reach you back?</label>
-                        <input id="email"/>
+                        <div class="email-input">
+                            <input id="email" placeholder="How can I reach you back?"/>
+                        </div>
 
-                        <label for="body">Leave your message:</label>
-                        <textarea id="body"></textarea>
+                        <div class="body-input">
+                            <textarea id="body" rows="4" placeholder="Leave your message:"></textarea>
+                            <p></p>
+                        </div>
 
                         <button>Send</button>
                     </form>
