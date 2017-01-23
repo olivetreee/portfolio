@@ -634,14 +634,14 @@ section#contact .section-subheading {
 }
 section#contact .contact-form input,
 section#contact .contact-form textarea {
-  width: 350px;
+  width: 440px;
   padding: 10px;
   border: 0;
+  margin-bottom: 5px;
+  transition: box-shadow 0.1s;
 }
 section#contact .contact-form input {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom: solid 1px #eeeeee;
+  border-radius: 5px;
   background-color: white;
 }
 section#contact .contact-form input:focus {
@@ -649,13 +649,17 @@ section#contact .contact-form input:focus {
   background-color: #d0f7ef;
 }
 section#contact .contact-form textarea {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
   resize: none;
 }
 section#contact .contact-form textarea:focus {
   outline: none;
   background-color: #d0f7ef;
+}
+section#contact .contact-form .captcha-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 section#contact .contact-form button {
   font-size: 20px;
@@ -665,10 +669,25 @@ section#contact .contact-form button {
   background: #16a085;
   border-bottom: solid 5px #12715e;
   color: white;
+  outline: 0;
+  transition: all 0.1s;
+  margin-left: 50px;
+}
+section#contact .contact-form button:active,
+section#contact .contact-form button:visited {
+  transition: all 0.1s;
+  margin-top: 5px;
+  border-bottom: 0;
 }
 section#contact .contact-form .input-danger {
-  background-color: #e74c3c;
+  box-shadow: 0px -5px #e74c3c inset;
+}
+section#contact .contact-form h3 {
   color: white;
+  text-transform: none;
+}
+section#contact .contact-form .error-message {
+  color: #e74c3c;
 }
 section#contact .form-control:focus {
   border-color: #16a085;
@@ -743,6 +762,19 @@ section#contact .github-logo {
 }
 section#contact .twitter-logo {
   color: #1DA1F2;
+}
+@media (max-width: 767px) {
+  section#contact .contact-form input,
+  section#contact .contact-form textarea {
+    width: 350px;
+  }
+  section#contact .captcha-submit {
+    flex-direction: column;
+  }
+  section#contact .captcha-submit button {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 footer {
   padding: 25px 0;

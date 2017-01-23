@@ -627,14 +627,16 @@ section#contact {
     }
     .contact-form {
         input, textarea {
-            width: 350px;
+            width: 440px;
             padding: 10px;
             border: 0;
+            margin-bottom: 5px;
+            transition: box-shadow 0.1s;
         }
         input {
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-            border-bottom: solid 1px @gray-lighter;
+            // border-top-left-radius: 5px;
+            // border-top-right-radius: 5px;
+            border-radius: 5px;
             background-color: white;
         }
         input:focus {
@@ -642,13 +644,19 @@ section#contact {
             background-color: @theme-lighter;
         }
         textarea {
-            border-bottom-left-radius: 5px;
-            border-bottom-right-radius: 5px;
+            // border-bottom-left-radius: 5px;
+            // border-bottom-right-radius: 5px;
+            border-radius: 5px;
             resize: none;
         }
         textarea:focus {
             outline: none;
             background-color: @theme-lighter;
+        }
+        .captcha-submit {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         button {
             font-size: 20px;
@@ -658,10 +666,24 @@ section#contact {
             background: @theme-primary;
             border-bottom: solid 5px @theme-dark;
             color: white;
+            outline: 0;
+            transition: all 0.1s;
+            margin-left: 50px;
+        }
+        button:active, button:visited {
+            transition: all 0.1s;
+            margin-top: 5px;
+            border-bottom: 0;
         }
         .input-danger {
-            background-color: @theme-danger;
+            box-shadow: 0px -5px @theme-danger inset;
+        }
+        h3 {
             color: white;
+            text-transform: none;
+        }
+        .error-message {
+            color: @theme-danger;
         }
     }
     .form-control:focus {
@@ -735,6 +757,23 @@ section#contact {
     }
     .twitter-logo {
       color: #1DA1F2;
+    }
+}
+
+@media(max-width:767px) {
+    section#contact {
+        .contact-form {
+            input, textarea {
+                width: 350px;
+            }
+        }
+        .captcha-submit{
+            flex-direction: column;
+            button {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
     }
 }
 

@@ -36,6 +36,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- reCAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
 </head>
 
 <body id="page-top" class="index">
@@ -295,15 +299,17 @@
                 <div class="col-md-12 contact-form">
                     <form action="">
                         <div class="email-input">
-                            <input id="email" placeholder="How can I reach you back?"/>
+                            <input id="email" placeholder="What e-mail should I reply to?"/>
                         </div>
 
                         <div class="body-input">
                             <textarea id="body" rows="4" placeholder="Leave your message:"></textarea>
                             <p></p>
                         </div>
-
-                        <button>Send</button>
+                        <div class="captcha-submit">
+                            <div class="g-recaptcha" data-sitekey="6Lc-uhIUAAAAAEaIFA6yl97S9-qBkMX0Tqy9mLDq"></div>
+                            <button>Send</button>
+                        </div>
                     </form>
                 </div>
                 <!--<div class="col-md-3"></div>
