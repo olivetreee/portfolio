@@ -5,7 +5,6 @@ $(".contact-form").keyup(handleKeypress);
 
 function handleSubmit(e) {
     e.preventDefault();
-    console.log(e.target[2].value);
     
     const fromEmail = e.target[0].value;
     const validEmail = checkEmailPresence(fromEmail);
@@ -33,7 +32,6 @@ function handleSubmit(e) {
             `;
             $(".contact-form form").remove();
             $(".contact-form").append(successMessage);
-            console.log(res);
         }
 
         function error(res) {
@@ -43,12 +41,11 @@ function handleSubmit(e) {
             </h3>
             `;
             $(".contact-form").prepend(errorMessage);
-            console.log(res);
         }
 
         $.ajax({
             type: 'post',
-            url: 'http://localhost:3000/api/messages',
+            url: 'http://contact.clapinton.com/api/messages',
             data: dataBody,
             success,
             error: function(err) {console.log('error: ', err)}
