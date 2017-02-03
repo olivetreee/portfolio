@@ -632,6 +632,9 @@ section#contact .section-heading {
 section#contact .section-subheading {
   color: white;
 }
+section#contact .social-icons {
+  margin-bottom: 30px;
+}
 section#contact .contact-form input,
 section#contact .contact-form textarea {
   width: 440px;
