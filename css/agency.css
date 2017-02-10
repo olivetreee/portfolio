@@ -349,6 +349,9 @@ section h3.section-subheading {
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content .tech-logo {
   padding: 0;
 }
+#portfolio .portfolio-item .no-live-link:hover {
+  cursor: default;
+}
 #portfolio .portfolio-item .portfolio-caption {
   max-width: 400px;
   margin: 0 auto;
