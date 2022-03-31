@@ -5,7 +5,7 @@ $(".contact-form").keyup(handleKeypress);
 
 function handleSubmit(e) {
     e.preventDefault();
-    
+
     const fromEmail = e.target[0].value;
     const validEmail = checkEmailPresence(fromEmail);
 
@@ -45,7 +45,7 @@ function handleSubmit(e) {
 
         $.ajax({
             type: 'post',
-            url: 'http://contact.clapinton.com/api/messages',
+            url: 'https://contact.olivetree.dev/api/messages',
             data: dataBody,
             success,
             error: function(err) {console.log('error: ', err)}
